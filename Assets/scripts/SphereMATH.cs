@@ -6,7 +6,8 @@ public class SphereMATH : MonoBehaviour {
 
 		Rigidbody rb;
 		public float A = 0.01F;
-		public float k = 0.05F;
+		float g = 9.8F;
+	public float l = 9F;
 		float Omega;
 	Vector3 now;
 		void Start()
@@ -19,7 +20,7 @@ public class SphereMATH : MonoBehaviour {
 		}
 
 		void ls(){
-			Omega = Mathf.Sqrt (k / rb.mass);
+		Omega = Mathf.Sqrt (g / l);
 		}
 
 		void Update()
