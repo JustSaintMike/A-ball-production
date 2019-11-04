@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{CBBD9D58-E511-AE81-0EFF-9539F90085D1}</ProjectGuid>
+    <ProjectGuid>{9C3E477A-A00D-D6CA-14E0-2DB3A8C83E7B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -46,6 +46,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\scripts\Eiler.cs" />
+     <Compile Include="Assets\scripts\RungeKutt.cs" />
      <Compile Include="Assets\scripts\Sphere.cs" />
      <Compile Include="Assets\scripts\SphereMATH.cs" />
  <Reference Include="UnityEngine.UI">

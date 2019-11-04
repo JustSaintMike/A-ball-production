@@ -5,28 +5,29 @@ using UnityEngine;
 public class SphereMATH : MonoBehaviour {
 
 		Rigidbody rb;
-		public float A = 0.01F;
+	 float A = Mathf.PI/2F;
 		float g = 9.8F;
-	public float l = 9F;
+	float p;
+	    float l ;
 		float Omega;
-	Vector3 now;
+	float t;
+	    Vector3 now;
 		void Start()
 		{
-			rb = GetComponent<Rigidbody>();
-			ls ();
-
-		Debug.Log (rb.position);
-		now = rb.position;
-		}
-
-		void ls(){
+		rb = GetComponent<Rigidbody>();
+		l = Mathf.Abs(rb.position.x);
+		Debug.Log (l);
 		Omega = Mathf.Sqrt (g / l);
+		Debug.Log (Omega);
 		}
 
 		void Update()
 		{
-		rb.MovePosition( now + new Vector3( A*Mathf.Cos(Omega*Time.realtimeSinceStartup),				//x
-											-A*Mathf.Abs(Mathf.Sin(Omega*Time.realtimeSinceStartup)),	//y
-											0f) );														//z
+		t += Time.deltaTime;
+		p = A * Mathf.Cos (Omega * t);
+		Debug.Log ("Math: " + t + ", " + p+" "+A+" "+Omega);
+		rb.position=new Vector3( l*Mathf.Sin(p),				//x
+			-l*(Mathf.Cos(p)),	//y
+			0f) ;														//z
 		}
 }
